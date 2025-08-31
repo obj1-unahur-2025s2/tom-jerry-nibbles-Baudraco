@@ -3,11 +3,13 @@ object tom {
     var energia = 50
 
     method comer(unRaton) {
-        energia = 100.min(energia + 12 + unRaton.peso())
+        //energia = 100.min(energia + 12 + unRaton.peso())
+        energia = energia + 12 + unRaton.peso()
         unRaton.serComido()
     }
     method correr(distancia) {
-        energia = 0.max(energia - distancia /2)
+        //energia = 0.max(energia - distancia /2)
+        energia = energia - distancia /2
     }
     method velocidadMaxima() {return 5 + energia / 10}
     method energia() {return energia}
